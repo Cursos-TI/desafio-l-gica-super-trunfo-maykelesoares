@@ -15,7 +15,7 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
-    char cidadeVencedora;
+    char cidadeVencedora[20];
 
     
     // Solicitação de dados da carta 1
@@ -86,15 +86,15 @@ int main() {
     if (populacao1 > populacao2)
     {
         //Criei a variável cidadeVencedora aqui dentro pois já lhe atribui o valor dependendo do valor da condicional;
-        cidadeVencedora = cidade1;
+        strcpy(cidadeVencedora, cidade1); //o strcpy permite copiar o valor da variável que está em formato de string;
         printf("A cidade de %s tem a maior população. \n", cidade1);
     }
     else{
-        cidadeVencedora = cidade2;
+        strcpy(cidadeVencedora, cidade2);
         printf("A cidade de %s tem a maior população. \n", cidade2);
     }
 
-    printf("A cidade vencedora é %s. \n", cidadeVencedora);
+        printf("A cidade vencedora é %s. \n", cidadeVencedora);
   
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
