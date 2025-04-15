@@ -16,6 +16,7 @@ int main() {
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
     char cidadeVencedora[20];
+    int atributoEscolhido;
 
     
     // Solicitação de dados da carta 1
@@ -79,8 +80,39 @@ int main() {
     float inversoDensidade2 = 1 / densidade2;    
 
     float superPoder2 = ((float)populacao2 + area2 + pib2 + (float)pontosTuristicos2 + inversoDensidade2);
+
+
+    printf("Escolha um atributo para comparar: \n");
+    printf("1. População \n");
+    printf("2. Área \n");
+    printf("3. PIB \n");
+    printf("4. Pontos turísticos \n");
+    printf("5. Densidade demografica");
+    scanf("%d", atributoEscolhido);    
+
+    switch (atributoEscolhido)
+    {
+    case 1:
+        printf("Atributo escolhido para comparação: População");
+        break;
+    case 2:
+        printf("Atributo escolhido para comparação: Área");
+        break;
+    case 3:
+        printf("Atributo escolhido para comparação: PIB");
+        break;
+    case 4:
+        printf("Atributo escolhido para comparação: Pontos turísticos");
+        break;
+    case 5:
+        printf("Atributo escolhido para comparação: Densidade demográfica");
+        break;
     
-    // Comparação de Cartas:
+    default:
+        break;
+    }
+    
+    //Comparação de Cartas:
     printf("População de %s: %lu. \n", cidade1, populacao1);
     printf("População de %s: %lu. \n", cidade2, populacao2);
     if (populacao1 > populacao2)
